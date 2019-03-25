@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="./ohad.js"></script>
+  </head>
+
+  <body onload='initCasesTable()' >
+	<img src="./images/Cellebrite_logo_2color_pos_rgb.png" alt="cellebrite_logo" height="80">
+	<img src="./images/MongoDB-Logo.png" alt="mongo_logo" height="80"><br>
+	connect to mongodb server: <input type="text" id="server_name_input" value='localhost' />
+	<input id="submit" type="submit" value="connect & get cases" /><br>
+	<div style="font-size:26;">mongodb server: <span id="server_name" ></span></div><br>
+<!--     <div id="chart_div"></div> -->
+<!--     <div id="curve_chart" style="width: 900px; height: 500px"></div> -->
+    
+    <div id="cases_table_div" style="width: 900px; height: 400px"></div>
+
+	<button onclick="exportExtractionsMetricsForSelectedCase()">Export Extractions-Metrics for Selected Case</button>
+  </body>
+</html>
