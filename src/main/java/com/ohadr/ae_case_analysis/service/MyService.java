@@ -14,7 +14,7 @@ import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoIterable;
 
 @Configuration
-public class MongoClientWrapper {
+public class MyService {
 
 	@Value("${mongo.user}")
     private String user; // the user name

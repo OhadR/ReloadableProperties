@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ohadr.ae_case_analysis.repository.AERepository;
-import com.ohadr.ae_case_analysis.service.ExtractionMetricsWriterService;
 import com.ohadr.common.utils.JsonUtils;
 
 
@@ -28,8 +27,6 @@ import com.ohadr.common.utils.JsonUtils;
 @RequestMapping(value = "/extractions")
 public class ExtractionWebApi 
 {
-	@Autowired
-	private ExtractionMetricsWriterService extractionMetricsWriterService;
 	
 	@Autowired
 	private AERepository storage;
@@ -64,7 +61,7 @@ public class ExtractionWebApi
 	{
 		log.info("received POST:extractions");
 		
-		String fileName = extractionMetricsWriterService.write(caseId);
+		String fileName = null;
 		log.info("write extractions' metrics status: " + fileName);
 
         response.setHeader("Content-Disposition", "attachment; filename=" + fileName);
