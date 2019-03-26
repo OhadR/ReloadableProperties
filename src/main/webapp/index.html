@@ -7,14 +7,12 @@
   </head>
 
   <body onload='initCasesTable()' >
-	connect to mongodb server: <input type="text" id="server_name_input" value='localhost' />
+	connect to mongodb server:
 	<input id="submit" type="submit" value="connect & get cases" /><br>
 	<div style="font-size:26;">mongodb server: <span id="server_name" ></span></div><br>
 <!--     <div id="chart_div"></div> -->
 <!--     <div id="curve_chart" style="width: 900px; height: 500px"></div> -->
     
-    <div id="cases_table_div" style="width: 900px; height: 400px"></div>
-
 	<button onclick="exportExtractionsMetricsForSelectedCase()">Export Extractions-Metrics for Selected Case</button>
   </body>
 </html>
